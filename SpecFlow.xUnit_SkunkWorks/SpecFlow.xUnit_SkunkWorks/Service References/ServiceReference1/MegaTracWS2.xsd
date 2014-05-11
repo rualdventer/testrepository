@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.142.156/MegaTrac_Public/MegaTracWS.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MegaTrac.WS" />
+  <xs:element name="APVendorImport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="vendor" nillable="true" type="q1:APVendor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="APVendorImportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="APVendorImportResult" nillable="true" type="q2:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ARCustomerImport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="customer" nillable="true" type="q3:ARCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ARCustomerImportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="ARCustomerImportResult" nillable="true" type="q4:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="APInvoiceImport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="invoice" nillable="true" type="q5:APInvoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="APInvoiceImportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="APInvoiceImportResult" nillable="true" type="q6:APInvoiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ARInvoiceImport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="invoice" nillable="true" type="q7:ARInvoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ARInvoiceImportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="ARInvoiceImportResult" nillable="true" type="q8:ARInvoiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GLLegacyJournalImport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="journal" nillable="true" type="q9:GLJournalLegacy" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GLLegacyJournalImportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="GLLegacyJournalImportResult" nillable="true" type="q10:GLJournalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GLProfitandLossJournalImport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="journal" nillable="true" type="q11:GLJournalProfitLoss" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GLProfitandLossJournalImportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="GLProfitandLossJournalImportResult" nillable="true" type="q12:GLJournalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerStatusExport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerStatusExportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="CustomerStatusExportResult" nillable="true" type="q13:ARCustomerExport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FullyPaidInvoices">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FullyPaidInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MegaTrac.WS" minOccurs="0" name="FullyPaidInvoicesResult" nillable="true" type="q14:FullyPaidInvoices" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

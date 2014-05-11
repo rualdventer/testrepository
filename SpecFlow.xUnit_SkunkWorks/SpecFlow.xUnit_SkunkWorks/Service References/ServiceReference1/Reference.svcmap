@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9d10fd88-48c5-40fd-950a-ae21af29c55a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.142.156/MegaTrac_Public/MegaTracWS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MegaTracWS.xsd" MetadataType="Schema" ID="3c271c7b-a23f-45ee-abb4-d8867c192181" SourceId="1" SourceUrl="http://192.168.142.156/MegaTrac_Public/MegaTracWS.svc?xsd=xsd2" />
+    <MetadataFile FileName="MegaTracWS.disco" MetadataType="Disco" ID="a9e66424-6e31-4a06-ab32-eae08f534c22" SourceId="1" SourceUrl="http://192.168.142.156/MegaTrac_Public/MegaTracWS.svc?disco" />
+    <MetadataFile FileName="MegaTracWS1.xsd" MetadataType="Schema" ID="2957c15a-c05d-450c-a413-b9ba0bb559b2" SourceId="1" SourceUrl="http://192.168.142.156/MegaTrac_Public/MegaTracWS.svc?xsd=xsd1" />
+    <MetadataFile FileName="MegaTracWS2.xsd" MetadataType="Schema" ID="5d65fb25-fc27-4212-b272-a9badae50d5f" SourceId="1" SourceUrl="http://192.168.142.156/MegaTrac_Public/MegaTracWS.svc?xsd=xsd0" />
+    <MetadataFile FileName="MegaTracWS.wsdl" MetadataType="Wsdl" ID="10bda891-9af7-4a32-81be-54b11bee62fb" SourceId="1" SourceUrl="http://192.168.142.156/MegaTrac_Public/MegaTracWS.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
