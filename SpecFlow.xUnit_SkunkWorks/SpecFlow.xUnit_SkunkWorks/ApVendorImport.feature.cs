@@ -34,8 +34,7 @@ namespace SpecFlow.xUnit_SkunkWorks
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ApVendorImport", "In order to avoid silly mistakes\r\nAs a math idiot\r\nI want to be told the sum of t" +
-                    "wo numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ApVendorImport", "", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,42 +74,58 @@ namespace SpecFlow.xUnit_SkunkWorks
         
         [Xunit.FactAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "ApVendorImport")]
-        [Xunit.TraitAttribute("Description", "Add two numbers")]
-        public virtual void AddTwoNumbers()
+        [Xunit.TraitAttribute("Description", "Create AP Vendor")]
+        public virtual void CreateAPVendor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", new string[] {
-                        "mytag"});
-#line 7
-this.ScenarioSetup(scenarioInfo);
-#line 8
- testRunner.Given("I have entered 50 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create AP Vendor", ((string[])(null)));
+#line 3
+ this.ScenarioSetup(scenarioInfo);
+#line 4
+  testRunner.Given("there exist a MegaTracWS Service", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 5
+  testRunner.Given("there exists a APVendorImport method in the MegfaTracWS Web Service", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "vendornumber",
+                        "megatracbpid"});
+            table1.AddRow(new string[] {
+                        "Vendor",
+                        "1234"});
+#line 6
+  testRunner.Given("there exists a populated APVendor object:", ((string)(null)), table1, "Given ");
 #line 9
- testRunner.And("I have entered 70 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.Given("APVendor.VendorNumber does not exist in the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.Given("APVendor.MegaTracBPID does not exist in the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 11
- testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.When("the APVendorImport method is called with the APVendor object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+  testRunner.Then("a Result object is returned and Result.Success == true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 13
+   testRunner.And("MGFSRV.dbo.APVEN.VENDORID should be populated with ARVendor.Vendor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+   testRunner.And("blah die blah", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Xunit.FactAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "ApVendorImport")]
-        [Xunit.TraitAttribute("Description", "Subtract two numbers")]
-        public virtual void SubtractTwoNumbers()
+        [Xunit.TraitAttribute("Description", "asdf")]
+        public virtual void Asdf()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtract two numbers", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("asdf", new string[] {
                         "mytag"});
-#line 14
+#line 19
 this.ScenarioSetup(scenarioInfo);
-#line 15
- testRunner.Given("I have entered 100 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 16
- testRunner.And("I have entered 50 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
- testRunner.When("I press subtract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
- testRunner.Then("the result should be 50 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 20
+ testRunner.Given("I have entered 50 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 21
+ testRunner.And("I have entered 70 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
+ testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
